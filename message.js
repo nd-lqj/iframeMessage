@@ -55,18 +55,18 @@ const iframeMessageManager = {
       if (this.iframe.attachEvent) {
         this.iframe.attachEvent('onload', () => {
           // iframe加载完成后你需要进行的操作
-          this.iframe.contentWindow.postMessage(messageData, '*.arnoo.com');
+          this.iframe.contentWindow.postMessage(messageData, '*.baidu.com');
           console.log(`${window.location.hostname} send message data:`, messageData);
         });
       } else {
         this.iframe.onload = () => {
           // iframe加载完成后你需要进行的操作
-          this.iframe.contentWindow.postMessage(messageData, '*.arnoo.com');
+          this.iframe.contentWindow.postMessage(messageData, '*.baidu.com');
           console.log(`${window.location.hostname} send message data:`, messageData);
         };
       }
     } else {
-      this.iframe.contentWindow.postMessage(messageData, '*.arnoo.com');
+      this.iframe.contentWindow.postMessage(messageData, '*.baidu.com');
       console.log(`${window.location.hostname} send message data:`, messageData);
     }
   },
